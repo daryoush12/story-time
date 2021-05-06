@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card } from './card'
+import { Card } from './Card'
 import { Text } from './text'
 
 const AvatarImage = styled.img`
