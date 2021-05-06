@@ -1,0 +1,9 @@
+{
+    "jumpToAliasFile.alias": {
+        "@Components": "d:\\Projects\\story-time\\src\\Components",
+        "@Actions": "d:\\Projects\\story-time\\src\\Store\\Actions",
+        "@ActionTypes": "d:\\Projects\\story-time\\src\\App\\Store\\Actions\\Types",
+        "@Reducers": "d:\\Projects\\story-time\\src\\Store\\Reducers",
+        "@Store": "d:\\Projects\\story-time\\src\\Store"
+    }
+}

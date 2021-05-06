@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "jest",
-        "start": "webpack-dev-server --open --mode development",
+        "start": "webpack-dev-server --open --mode development --env .env",
         "build": "webpack --mode production",
         "analyze": "npm run build webpack --profile --json > stats.json"
     },
@@ -42,6 +42,7 @@
         "babel-loader": "^8.1.0",
         "babel-plugin-module-resolver": "^4.0.0",
         "css-loader": "^4.3.0",
+        "dotenv-webpack": "^7.0.2",
         "html-loader": "^1.1.0",
         "html-webpack-plugin": "^4.3.0",
         "jest": "^26.5.2",

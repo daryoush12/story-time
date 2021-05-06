@@ -4,6 +4,8 @@ const htmlwebpackplugin = require('html-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
     .BundleAnalyzerPlugin
 
+const Dotenv = require('dotenv-webpack')
+
 module.exports = {
     module: {
         rules: [
@@ -45,6 +47,10 @@ module.exports = {
             filename: './index.html',
         }),
         new BundleAnalyzerPlugin(),
+        new Dotenv({
+            path: './.env',
+            safe: true,
+        }),
     ],
 
     resolve: {
