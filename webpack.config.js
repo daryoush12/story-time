@@ -63,6 +63,7 @@ module.exports = {
             ),
             '@Reducers': path.resolve(__dirname, 'src/Store/Reducers/'),
             '@Store': path.resolve(__dirname, 'src/Store/'),
+            '@Config': path.resolve(__dirname, 'src/Config/'),
         },
     },
 }

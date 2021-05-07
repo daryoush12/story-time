@@ -12,7 +12,7 @@ export default function useStories() {
     return stories
 }
 
-async function addStory(story) {
+export async function addStory(story) {
     // Default options are marked with *
     const response = await fetch(`${process.env.STORY_API}/stories/new`, {
         method: 'PUT',

@@ -1,28 +1,27 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Grid, Column, View } from '@Components/layout'
-import { Card } from '@Components/card'
-import Avatar from '@Components/avatar'
-import useStories from '../../Hooks/story'
+import { makeStyles } from '@material-ui/core/styles'
+import Grid from '@material-ui/core/Grid'
+import StoryAdder from '@Components/StoryAdder'
+import StoryFeed from '@Components/StoryFeed'
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        flexGrow: 1,
+        marginTop: '2em',
+    },
+}))
 
 export default function Home() {
-    const stories = useStories()
+    const classes = useStyles()
 
     return (
-        <View>
-            <Grid>
-                <Column width={20} />
-                <Column width={60}>
-                    <Card style={{ marginBottom: '1em' }}>
-                        <label for="story">Write your story</label>
-                        <input type="text" name="story" />
-                    </Card>
-                    <Card>
-                        {stories && stories.map((story) => <p>{story}</p>)}
-                    </Card>
-                </Column>
-                <Column width={20} />
+        <div className={classes.root}>
+            <Grid container spacing={3} justify="center">
+                <Grid item xs={6}>
+                    <StoryAdder />
+                    <StoryFeed />
+                </Grid>
             </Grid>
-        </View>
+        </div>
     )
 }
